@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Neighbourhood Map</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12" id="changes" onmousedown="events()">
+        <h1>AMRITSAR</h1>
+        <h3>Soul Of Punjab</h3>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-md-4">
+        <br>
+        <!--<button id="1" onClick="hidd()">Show</button>
+        <div id="2">
+          <p>Click it to show SearchBox</p>
+        </div>-->
+
+          <p id="first">Type your five favourite places</p>
+
+          <input placeholder=" type the places here"
+          data-bind="value: searchplaces, valueUpdate: 'afterkeydown' ,event: {keyup: searchbar}">
+
+          <ol data-bind="foreach: arr">
+
+            <li style="font-size:28px" data-bind="text:name,visible:show,click: $parent.myselection">
+            </li>
+          </ol>
+        </div>
+
+      <div class="col-md-8">
+
+        <div id="map"></div>
+      </div>
+    </div>
+
+  <script src="js/knockout.js"></script>
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/location.js"></script>
+  <script src="js/modelview.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJoQl1rdRZK6jD-4r-oEj2xLExZ3KDN9g&callback=initMap"
+  onerror="googerror()"></script>
+  <footer>&copy;2017 By Raghav Marwaha. All Rights
+    Reserved.
+  </footer>
+</body>
+
+</html>
